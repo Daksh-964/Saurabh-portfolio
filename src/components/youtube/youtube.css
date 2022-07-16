@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+.title{
+    font-weight: 900;
+    font-size: 3rem;
+    color: white;
+    text-transform: capitalize;
+    font-family: Orbitron, Arial, Helvetica, sans-serif
+}
+.frame{
+    margin-left: 1rem;
+}
+.youtube_content{
+    display: flex;
+    flex-direction: row;
+}

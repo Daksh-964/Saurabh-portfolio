@@ -1,0 +1,13 @@
+#card_contianer{
+    width: 10rem;
+}
+.img{
+    height: 50%;
+}
+.card-title{
+    color: rgb(0, 0, 0);
+
+}
+.card-text{
+    color: rgb(0, 0, 0);
+}

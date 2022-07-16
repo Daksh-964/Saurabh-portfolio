@@ -3,6 +3,7 @@ import IsVisible from 'react-is-visible'
 import { Fade } from 'react-reveal'
 import { skills } from '../../data/skills.json'
 import { useContainerDimensions } from '../../hooks'
+import './skills.css'
 
 const Skills = () => {
   const skillsWrapper = useRef()
@@ -25,31 +26,8 @@ const Skills = () => {
                   : {}
               }
             >
-              <h2>Skills</h2>
-              <ul className="skills" ref={skillsWrapper}>
-                {skills.map((skills) => {
-                  return (
-                    <li className="skill-bar-wrapper" key={skills.skillName}>
-                      <div
-                        className="skill-bar"
-                        style={
-                          isVisibleSkillsWrapper
-                            ? {
-                                transition: `${
-                                  1 + skills.id / 10
-                                }s width ease-in-out`,
-                                width: width * (skills.amount / 100),
-                              }
-                            : {
-                                width: 1,
-                              }
-                        }
-                      ></div>
-                      <div className="skill-name">{skills.skillName}</div>
-                    </li>
-                  )
-                })}
-              </ul>
+              <img className=' img_res' src='https://i.pinimg.com/originals/8c/ba/e8/8cbae894b87d526112eade459a45beee.jpg' alt='fli' />
+              
             </div>
           )}
         </IsVisible>

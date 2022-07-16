@@ -1,0 +1,161 @@
+.left-side {
+    border: 2px solid white;
+}
+
+.podcast-list {
+    border: 2px solid white;
+}
+
+.profile-data {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.social-handles {
+    height: 50vh;
+}
+
+.img_profile {
+    height: auto;
+    width: 40%;
+    margin: auto;
+}
+
+.social-handles {
+    margin-top: 3rem;
+}
+
+/* real */
+.main_content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+    height: calc(90vh + 51px);
+    z-index: 1000;
+}
+
+.intro_about {
+    color: white;
+    font-size: 50px;
+    animation: intro_anim 4s ease 0s 1 normal forwards;
+}
+
+.greeting {
+    margin: -63px 20px 0 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.profile {
+    border-radius: 50%;
+    border: 0.2rem solid #020302;
+}
+
+.greeting-text {
+    margin: 15px;
+}
+
+.section {
+    border: 2px solid white;
+    height: calc(90vh + 30px);
+}
+
+.head_about {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-right: 4rem;
+    font-family: var(--header-font);
+    color: inherit;
+    text-shadow: 4px 0 0 #2aecec, -4px 0 0 #f704f6;
+    font-weight: 900;
+    line-height: 1.4em;
+    letter-spacing: 0.08em;
+}
+
+.text_about {
+    font-size: 28px;
+    max-width: 593px;
+    font-family: Orbitron, Arial, Helvetica, sans-serif;
+    color: inherit;
+    font-weight: 500;
+    line-height: 1.4em;
+    letter-spacing: 0.13px;
+    word-wrap: break-word;
+}
+
+.img_home {
+    width: 38%;
+    height: auto;
+}
+
+/* .icon:hover{
+      background: white;
+      opacity: 0.7;
+      border-radius: 15%;
+      color: rgb(0, 0, 0);
+  } */
+/* .social_icon a {
+    text-decoration: none;
+    color: white;
+}
+
+.social_icon a:hover {
+    text-decoration: none;
+    background: white;
+    opacity: 0.7;
+    border-radius: 15%;
+    color: rgb(0, 0, 0);
+} */
+
+.social_links {
+    text-decoration: none;
+}
+
+.btn-15 {
+    background: rgb(3, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    font-family: Orbitron, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-15:hover {
+    color: rgb(0, 0, 0);
+    background: rgb(255, 3, 142);
+}
+
+.btn-15:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.btn-15:active {
+    top: 2px;
+}
+
+.btn-15 a {
+    text-decoration: none;
+    color: black;
+}
+/*Social handles  */
+.social_handles{
+    display: flex;
+    flex-direction: column;
+}
+.social_button{
+    background-color: inherit;
+    color: white;
+    font-size: 1.5rem;
+    border:2px solid white;
+    cursor: pointer;
+    width: 12rem;
+    
+}

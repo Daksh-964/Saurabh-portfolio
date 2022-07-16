@@ -1,0 +1,24 @@
+#card_contianer{
+    width: 10rem;
+}
+.card_tweet{
+    width: 50%;
+}
+/* .img-tweets{
+    height: 50%;
+} */
+.card-title{
+    color: rgb(0, 0, 0);
+
+}
+.card-text{
+    color: rgb(0, 0, 0);
+}
+.tweet{
+    align-items: center;
+}
+.img_tweets{
+    width: 50%;
+    height: auto;
+    margin: auto;
+}

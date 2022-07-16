@@ -1,0 +1,88 @@
+ <div className="experience-content">
+        <ul className="experience-list">
+          {experienceData.experience.reverse().map((exp) => (
+            <li key={`experience-${exp.company}`}>
+              <Fade bottom duration={1000} distance="20px">
+                <ExperienceCard experience={exp} />
+              </Fade>
+            </li>
+          ))}
+        </ul>
+        <Fade bottom duration={1200} distance="20px">
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
+            <p style={{ textAlign: 'center' }}>
+              Further in-depth experience pre 2020 can be found on my{' '}
+              <a
+                href="https://www.linkedin.com/in/mjigalin/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  textDecoration: 'none',
+                  color: '#0be779',
+                  cursor: 'pointer',
+                }}
+              >
+                LinkedIn
+              </a>
+              .
+            </p>
+          </div>
+        </Fade>
+      </div>
+      <!-- HTML !-->
+<button class="button-58" role="button">Button 58</button>
+
+/* CSS */
+.button-58 {
+  align-items: center;
+  background-color: #06f;
+  border: 2px solid #06f;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-58:focus {
+  color: #171e29;
+}
+
+.button-58:hover {
+  background-color: #3385ff;
+  border-color: #3385ff;
+  fill: #06f;
+}
+
+.button-58:active {
+  background-color: #3385ff;
+  border-color: #3385ff;
+  fill: #06f;
+}
+
+@media (min-width: 768px) {
+  .button-58 {
+    min-width: 170px;
+  }
+}

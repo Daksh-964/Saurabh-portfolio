@@ -5,12 +5,12 @@ const useContainerDimensions = (myRef) => {
 
   useEffect(() => {
     const getDimensions = () => ({
-      width: myRef.current.offsetWidth,
+      width: myRef.current
     })
     const handleResize = () => {
       setDimensions(getDimensions())
     }
-
+  
     if (myRef.current) {
       setDimensions(getDimensions())
     }

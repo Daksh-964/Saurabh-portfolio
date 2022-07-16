@@ -1,117 +1,166 @@
-@media screen and (min-width: 599px) {
-  .profile {
-    width: 120px;
-    height: 120px;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+.opening_page
+{
+    /* background: url(../imgs/bio_bg.png);
+	background-size: cover; */
+	overflow-x: hidden;
+    background: url();
 }
-@media screen and (max-width: 599px) {
-  .profile {
-    width: 100px;
-    height: 100px;
-  }
+
+.intro
+{
+	color: white;
+	font-size: 50px;
+	animation: intro_anim 4s ease 0s 1 normal forwards;
 }
-@media screen and (min-height: 599px) {
-  .scroll-down {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 170px;
-  }
+@keyframes animate
+{
+	0%
+	{
+		background-position-x: 0;
+	}
+
+	100%
+	{
+		background-position-x: 1000px;
+	}
 }
-@media screen and (max-height: 599px) and (min-height: 410px) {
-  .scroll-down {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 100px;
-  }
+
+@keyframes animate2 
+{
+	0%
+	{
+		background-position-x: 0;
+	}
+
+	100%
+	{
+		background-position-x: -1000px;
+	}
 }
-@media screen and (max-height: 409px) {
-  .scroll-down {
-    display: none;
-  }
+
+/* morph text start */
+
+.morph_cont
+{
+	position: relative;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 !important;
+	font-size: 40px !important;
 }
+
+@media only screen and (max-width: 1100px)
+{
+	.morph_cont	
+	{
+		font-size: 30px !important;
+	}
+}
+
+
 .home {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  text-align: center;
+  /* text-align: center; */
   align-items: center;
-  height: calc(100vh + 63px);
+  height: calc(90vh + 51px);
   z-index: 1000;
 }
+
 .greeting {
   margin: -63px 20px 0 20px;
 }
+
 .hide {
   display: none;
 }
+
 .profile {
   border-radius: 50%;
-  border: 0.2rem solid #0be779;
+  border: 0.2rem solid #020302;
 }
+
 .greeting-text {
   margin: 15px;
 }
-.name {
-  color: rgb(11, 231, 121);
+.section{
+  border: 2px solid white;
+  height: calc(90vh + 30px);
 }
-.links {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 20px;
-  max-width: 60px;
-  margin: 20px auto 0 auto;
+.head{
+	text-transform: uppercase;
+	font-size: 3rem;
+	margin-right: 4rem;
+	font-family: var(--header-font);
+    color: inherit;
+    text-shadow: 4px 0 0 #2aecec, -4px 0 0 #f704f6;
+    font-weight: 900;
+    line-height: 1.4em;
+    letter-spacing: 0.08em;
 }
-.links a,
-.links img {
-  width: 50px;
-  height: 50px;
+.text{
+	font-size: 28px;
+    max-width: 593px;
+    font-family: Orbitron, Arial, Helvetica, sans-serif;
+    color: inherit;
+    font-weight: 500;
+    line-height: 1.4em;
+    letter-spacing: 0.13px;
+	word-wrap: break-word; 
 }
-.scroll-down-element {
-  display: inline-block;
+.img_home{
+    width: 38%;
+    height: auto;
 }
-.wave-emoji {
-  animation-duration: 1.8s;
-  animation-iteration-count: infinite;
-  animation-name: wave;
-  display: inline-block;
-  transform-origin: 70% 70%;
-  animation-fill-mode: forwards;
+/* .icon:hover{
+	background: white;
+	opacity: 0.7;
+	border-radius: 15%;
+	color: rgb(0, 0, 0);
+} */
+.social_icon a{
+	text-decoration: none;
+	color: white;
 }
-.particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: calc(100vh);
-  width: 100%;
+.social_icon a:hover{
+	text-decoration: none;
+	background: white;
+	opacity: 0.7;
+	border-radius: 15%;
+	color: rgb(0, 0, 0);
 }
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(-10deg);
-  }
-  20% {
-    transform: rotate(12deg);
-  }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(9deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+.social_links{
+	text-decoration: none;
 }
+.btn-15 {
+	background: rgb(3, 255, 255);
+   color: rgb(0, 0, 0);
+   border: 2px solid rgb(0, 0, 0);
+   font-family: Orbitron, Arial, Helvetica, sans-serif;
+   font-weight: 500;
+   text-transform: uppercase;
+   transition: all 0.3s ease;
+ }
+
+ .btn-15:hover {
+   color: rgb(0, 0, 0);
+   background: rgb(255, 3, 142);
+ }
+ .btn-15:hover:after {
+   left: 0;
+   width: 100%;
+ }
+ .btn-15:active {
+   top: 2px;
+ }
+ .btn-15 a{
+	text-decoration: none;
+	color: black;
+ }

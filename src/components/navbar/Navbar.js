@@ -1,64 +1,32 @@
-import React, { useState } from 'react'
-import './Navbar.css'
-import { Link } from 'react-scroll'
-import MobileNav from '../mobileNav/MobileNav'
-
-const Navbar = () => {
-  const [mobilenavVisible, setMobilenavVisible] = useState(false)
-  const [hamburgerClass, setHamburgerClass] = useState('')
-  const toggleMobilenavVisible = () => {
-    setMobilenavVisible(!mobilenavVisible)
-    if (hamburgerClass === '') {
-      setHamburgerClass('open')
-    } else {
-      setHamburgerClass('')
-    }
-  }
+import React,{useState} from 'react';
+import './Navbar.css';
+function Navbar() {
   return (
-    <div className="navbar">
-      <div className="navlinks">
-        <div className="navlink-wrapper">
-          <Link to="home" spy={true} smooth={true} duration={500}>
-            HOME
-          </Link>
-        </div>
-        <div className="navlink-wrapper">
-          <Link to="about" spy={true} smooth={true} duration={500}>
-            ABOUT
-          </Link>
-        </div>
-        <div className="navlink-wrapper">
-          <Link to="experience" spy={true} smooth={true} duration={500}>
-            EXPERIENCE
-          </Link>
-        </div>
-        {/* <div className="navlink-wrapper">
-          <Link to="projects" spy={true} smooth={true} duration={500}>
-            PROJECTS
-          </Link>
-        </div> */}
-        <div className="navlink-wrapper">
-          <Link to="contact" spy={true} smooth={true} duration={500}>
-            CONTACT
-          </Link>
-        </div>
-      </div>
-      <div className="hamburger">
-        <div
-          id="hamburger-icon"
-          className={hamburgerClass}
-          onClick={toggleMobilenavVisible}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <MobileNav
-        toggleMobilenavVisible={toggleMobilenavVisible}
-        mobilenavVisible={mobilenavVisible}
-      />
+    <div>
+      <nav class="navbar navbar-expand-lg  " id='navbar'>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item m-2">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item m-2">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item m-2">
+          <a class="nav-link" href="#">Blogs</a>
+        </li>
+        <li class="nav-item m-2">
+          <a class="nav-link">Podcast</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
     </div>
   )
 }

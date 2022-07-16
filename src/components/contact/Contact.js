@@ -9,17 +9,10 @@ import facebook from '../../images/social/facebook.png'
 
 const Contact = () => {
   return (
-    <Section title="Contact">
+    <Section title="Subscribe to your Newsletter">
       <ContactForm />
       <Bounce cascade>
         <div className="links">
-          <a
-            href="https://github.com/jigalin"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={github} alt="Github Logo" width="40px" />
-          </a>
           <a
             href="https://www.linkedin.com/in/mjigalin/"
             target="_blank"

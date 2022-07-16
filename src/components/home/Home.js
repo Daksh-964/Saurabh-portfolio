@@ -1,85 +1,66 @@
-import React, { useState } from 'react'
+import React from 'react';
 import './Home.css'
-import Fade from 'react-reveal/Fade'
-import { Bounce } from 'react-reveal'
-import { Link } from 'react-scroll'
-import Particles from 'react-particles-js'
-import Typewriter from 'typewriter-effect'
-import ArrowDropDownCircleIcon from '@material-ui/icons/ArrowDropDownCircle'
-import Navbar from '../navbar/Navbar'
-import config from '../../config'
-import profile from '../../images/matt.png'
-import linkedin from '../../images/social/linkedin.png'
+import About from '../about/About';
+import Blogs from '../blogs/blogs';
+import Calendly from '../calendly/calendly';
+import Youtube from '../youtube/youtube';
+import Podcast from '../podcast/podcast';
+import Tweets from '../twitter/tweets'
+import Aboutus from '../aboutus/Aboutus'
+import Projects from '../projects/Projects';
+import Contact from '../contact/Contact';
+import Footer from '../footer/Footer';
 
-const Home = () => {
-  const [imageLoaded, setImageLoaded] = useState(false)
+
+function Openingpage() {
   return (
-    <div className="home-wrapper">
-      <div className="home">
-        <Particles className="particles" params={config.particles} />
-        <div className={`greeting${!imageLoaded ? ' hide' : ''}`}>
-          <Fade bottom distance="40px">
-            <img
-              className="profile"
-              alt="m.jigalin profile"
-              src={profile}
-              onLoad={() => setImageLoaded(true)}
-            />
-            <h1 className="greeting-text">
-              Hi, I'm <span className="name">Matthew Jigalin</span>.{' '}
-              <span className="wave-emoji" role="img" aria-label="waving hand">
-                👋
-              </span>
-            </h1>
-            <h1 className="greeting-text">
-              <Typewriter
-                options={{
-                  strings: [
-                    'I like to design things.',
-                    'I love learning new tech.',
-                    'I love meeting new people.',
-                    'I create unique digital experiences.',
-                  ],
-                  autoStart: true,
-                  loop: true,
-                  deleteSpeed: 10,
-                  cursor: '<',
-                  delay: 100,
-                }}
-              />
-            </h1>
-            <Bounce cascade>
-              <div className="links">
-                <a
-                  href="https://www.linkedin.com/in/mjigalin/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={linkedin} alt="Linkedin Logo" width="50px" />
-                </a>
-              </div>
-            </Bounce>
-            <div className="scroll-down">
-              <Link
-                activeClass="active"
-                to="about"
-                spy={true}
-                smooth={true}
-                offset={-63}
-                duration={500}
-              >
-                <ArrowDropDownCircleIcon
-                  fontSize="large"
-                  style={{ pointerEvents: 'fill', cursor: 'pointer' }}
-                />
-              </Link>
+    <>
+      <div className='container-fluid mb-4'>
+        <div className='main_content row'>
+          <div className='col-lg-5 offset-md-1 intro_about mb-2 mx-auto text-center mt-1'>
+            <div className='content'>
+              <h1 className='head'>Daksh Singh</h1>
+              <p className='text'>Your Favorite Developer who can clone every website.</p>
             </div>
-          </Fade>
+            <div className='social_icon' >
+              <a href='https://www.youtube.com/channel/UC5xurO4ea0KPc9SLRIrpWCw' className='social_links'>
+                < i className="fab fa-youtube px-2 icon" />
+              </a>
+              <a href='#'>
+                <i className="fab fa-twitter px-2 icon" />
+              </a>
+              <a href='#'>
+                <i class="fab fa-linkedin px-2 icon" />
+              </a>
+              <a href='#'>
+                <i class="fab fa-instagram px-2 icon" />
+              </a>
+            </div>
+            <a href='https://twitter.com/0xSaurabh_'>
+              <button className='btn btn-15' type='button'>
+                Enter
+              </button>
+            </a>
+          </div>
+          <div className='col-lg-5 mb-5 text-center offset-md-1 mx-auto mt-2'>
+
+            <img className='img_home' src='https://i.pinimg.com/originals/8c/ba/e8/8cbae894b87d526112eade459a45beee.jpg' alt='fli' />
+
+          </div>
         </div>
-        <Navbar />
       </div>
-    </div>
+      <Podcast />
+      <br />
+      <br />
+      <Tweets />
+      <Calendly />
+      <Blogs />
+      <About  />
+      <Projects />
+      <Contact />
+      <Footer />
+    </>
   )
 }
 
-export default Home
+export default Openingpage;
